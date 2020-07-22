@@ -7,13 +7,40 @@
     <title>Tasks List</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;263;531&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
 
-    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="screen">
-        <h1 class="main-heading">My Tasks</h1>
-        <hr />
+
+        <article>
+            <header>
+                <h1 class="main-heading">My Tasks</h1>
+                <h3 class="tasks-completed">2 of 7 tasks</h3>
+            </header>
+        </article>
+
+
+        <article class="add-new-tasks">
+            <label for="task">Add a new task</label>
+            
+            <div class="submit-input-task">                
+                <textarea class="task" maxlength=40 minlength="1"></textarea>
+                <button class="btn-add-task js-btn-add-task">Add Task</button>
+            </div>
+        </article>
+
+
+        <form class="tasks-list">
+            <input type="checkbox" id="task" name="task" value="task" />
+            <label for="task">Throw out the trash</label>
+            
+        </form>
+
+
     </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
