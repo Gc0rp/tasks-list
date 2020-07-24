@@ -23,6 +23,8 @@ function addTask(enteredTask){
 
     todoTasks.push(enteredTask);
     form.appendChild(groupTask);
+
+    console.log("Task Made: " + groupTask.innerHTML);
 }
 
 function removeTask(task){
@@ -31,19 +33,16 @@ function removeTask(task){
         if(currTask !== task){ return task; }
     });
 
-    console.log(todoTasks);
-
-
-    console.log(task);
     var removedTask = document.getElementById('lbl-' + task);
 
+    removedTask.parentNode.setAttribute('class', 'removed-task');
 
-    console.log(removedTask);
 
     var removeCheckbox = document.querySelector('.' + task);
+    removeCheckbox.classList.remove(task);
+    removeCheckbox.setAttribute('class', 'remove-checkbox');
 
-    removeCheckbox.cl
-
+    console.log(removeCheckbox);
     removedTask.innerHTML = "<del>" + removedTask.innerText + "</del>";
 }
 
@@ -54,7 +53,7 @@ BTN_ADD_TASK.addEventListener('click', function buttonClicked () {
 });
 
 TASK_LIST.addEventListener('click', function taskCompleted(event) {
-    console.log(event.target);
+    
     if(event.target.tagName === 'INPUT'){
         removeTask(event.target.className);
     } else if (event.target.tagName === 'LABEL') {

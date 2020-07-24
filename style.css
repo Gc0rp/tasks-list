@@ -78,7 +78,6 @@
 }
 
 .tasks-list {
-    padding-left: 25px;
     overflow-y: auto;
 }
 
@@ -97,10 +96,20 @@
     padding: 15px 0px;
 }
 
+.task input[type=checkbox] {
+    margin-left: 20px;
+}
+
 .task label {
     padding-left: 15px;
 }
 
-.removed-task{
-    
+.removed-task {
+    padding: 15px 15px;
+    color: red;
+    background-color: #F4F4F6;
+}
+
+.remove-checkbox {
+    display: none;
 }
